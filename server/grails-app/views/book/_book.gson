@@ -1,0 +1,10 @@
+import com.ociweb.Book
+import groovy.transform.Field
+
+@Field Book book
+
+json {
+    title book.title
+    author book.author
+    inventoryNumber book.inventory.number
+}

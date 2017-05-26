@@ -1,0 +1,6 @@
+import com.ociweb.Book
+import groovy.transform.Field
+
+@Field List<Book> bookList = []
+
+json tmpl.book("book", bookList)

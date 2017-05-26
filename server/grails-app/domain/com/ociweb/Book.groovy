@@ -8,6 +8,9 @@ class Book {
     String title
     String author
 
+    Inventory inventory
+
     static constraints = {
+        inventory nullable: true
     }
 }
