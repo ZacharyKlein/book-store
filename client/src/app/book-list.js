@@ -11,6 +11,7 @@ const BookList = ({books, deleteBook}) => {
     return (<tr key={book.id}>
       <td className="title">{book.title}</td>
       <td className="author">{book.author}</td>
+      <td className="inventory">{book.inventoryNumber}</td>
       <td><Button bsStyle="danger" onClick={() => deleteBook(book.id)}>Delete</Button></td>
     </tr>);
   };
@@ -23,6 +24,7 @@ const BookList = ({books, deleteBook}) => {
         <tr>
           <th>Title</th>
           <th>Author</th>
+          <th>Inventory #</th>
           <th></th>
         </tr>
 
