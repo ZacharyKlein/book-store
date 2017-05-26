@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Grid, Jumbotron } from 'react-bootstrap';
 import AppNav from './AppNav';
+import Books from './app/books';
 
 import { SERVER_URL, CLIENT_VERSION, REACT_VERSION } from './config';
 import 'whatwg-fetch';
@@ -43,7 +44,7 @@ class App extends Component {
               <br/>
             </Jumbotron>
 
-
+            <Books />
 
           </div>
         </Grid>

@@ -27,29 +27,3 @@
     float: left;
 }
 
-.about-react-logo {
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
-    padding: 30px;
-    background: url("../images/react.png") no-repeat;
-}
-
-.about-webpack-logo {
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
-    padding: 30px;
-    background: url("../images/webpack.gif") no-repeat;
-}
-
-.about-grails-logo {
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
-    padding: 20px;
-    background: url("../images/grails.png") no-repeat;
-}
