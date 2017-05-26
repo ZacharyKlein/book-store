@@ -32,7 +32,13 @@ class Books extends Component {
       .catch(ex => console.error('Unable to load books', ex));
   };
 
-
+  deleteBook = (id) => {
+    fetch(`${SERVER_URL}/api/book/${id}`, {
+      method: 'DELETE',
+      headers: {'Content-Type': 'application/json'}
+    }).then(r => {if(r.status === 204) this.removeBook(id)})
+      .catch(ex => console.error('Unable to delete book', ex));
+  };
 
   addBook = (book) => {
     let books = this.state.books;
@@ -40,7 +46,10 @@ class Books extends Component {
     this.setState({books});
   };
 
-
+  removeBook = (id) => {
+    let books = this.state.books.filter(b => b.id !== id);
+    this.setState({books});
+  };
 
 
   render() {

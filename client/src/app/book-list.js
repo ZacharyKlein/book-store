@@ -2,16 +2,16 @@
  * Created by zak on 11/28/16.
  */
 import React from 'react';
-import  {array} from 'prop-types';
-import {Table} from 'react-bootstrap';
+import  {array, func} from 'prop-types';
+import {Table, Row, Button} from 'react-bootstrap';
 
-const BookList = ({books}) => {
+const BookList = ({books, deleteBook}) => {
 
   const renderBookRow = (book) => {
     return (<tr key={book.id}>
       <td className="title">{book.title}</td>
       <td className="author">{book.author}</td>
-      <td></td>
+      <td><Button bsStyle="danger" onClick={() => deleteBook(book.id)}>Delete</Button></td>
     </tr>);
   };
 
@@ -36,7 +36,8 @@ const BookList = ({books}) => {
 };
 
 BookList.propTypes = {
-  books: array
+  books: array,
+  deleteBook: func
 };
 
 export default BookList;
