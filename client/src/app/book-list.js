@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import  {array, func} from 'prop-types';
-import {Table, Row, Button} from 'react-bootstrap';
+import {Table, Button} from 'react-bootstrap';
 
 const BookList = ({books, deleteBook}) => {
 
@@ -26,7 +26,7 @@ const BookList = ({books, deleteBook}) => {
           <th></th>
         </tr>
 
-        {books.map(renderBookRow)}
+        {books ? books.map(renderBookRow) : null}
 
         </tbody>
 
