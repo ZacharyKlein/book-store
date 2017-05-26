@@ -4,6 +4,7 @@ import {Grid} from 'react-bootstrap';
 require('./../css/style.css');
 require('whatwg-fetch');
 
+import BookList from './book-list';
 import {SERVER_URL} from '../config';
 
 class Books extends Component {
@@ -20,10 +21,10 @@ class Books extends Component {
       .catch(ex => console.error('parsing failed', ex))
   }
 
-
   render() {
     return (
       <Grid>
+        <BookList books={this.state.books} />
       </Grid>
     );
   }
